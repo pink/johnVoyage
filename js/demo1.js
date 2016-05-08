@@ -24,18 +24,7 @@
 	    	closeNav();
 	  	}
 	}
-	function openNav(){
-		open = true;
-	    button.innerHTML = "-";
-	    classie.add(overlay, 'on-overlay');
-	    classie.add(wrapper, 'opened-nav');
-	}
-	function closeNav(){
-		open = false;
-		button.innerHTML = "+";
-		classie.remove(overlay, 'on-overlay');
-		classie.remove(wrapper, 'opened-nav');
-	}
+
 	document.addEventListener('click', closeNav);
 
 })();
