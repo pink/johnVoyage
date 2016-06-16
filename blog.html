@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Future Imperfect by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>John Voyage - Blog</title>
@@ -13,13 +8,15 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script type="text/javascript" src="js/greensock/minified/TweenMax.min.js"></script>
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
-	<body>
+	<body style="overflow: hidden;">
 
 		<!-- Wrapper -->
 			<div id="wrapper">
+
 
 				<!-- Header -->
 					<header id="header">
@@ -39,6 +36,32 @@
 						</nav>
 					</header>
 
+					<div id="container">
+						<svg width="400" height="200" viewBox="0 0 400 200">
+							<defs>
+								<filter id="goo">
+									<feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" />
+									<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 17 -7" result="cm" />
+									<feComposite in="SourceGraphic" in2="cm">
+								</filter>
+								<filter id="f2" x="-200%" y="-40%" width="400%" height="200%">
+									<feOffset in="SourceAlpha" dx="9" dy="3" />
+									<feGaussianBlur result="blurOut" in="offOut" stdDeviation="0.51" />
+									<feComponentTransfer>
+										<feFuncA type="linear" slope="0.05" />
+									</feComponentTransfer>
+									<feMerge>
+										<feMergeNode/>
+										<feMergeNode in="SourceGraphic" />
+									</feMerge>
+								</filter>
+							</defs>
+							<g filter="url(#goo)" style="fill:#03A9F4;">
+								<ellipse id="drop" cx="125" cy="90" rx="20" ry="20" fill-opacity="1" fill="#03A9F4"/>
+								<ellipse id="drop2"cx="125" cy="90" rx="20" ry="20" fill-opacity="1" fill="#03A9F4"/>
+							</g>
+						</svg>
+					</div>
 				<!-- Menu -->
 					<section id="menu">
 
@@ -79,58 +102,47 @@
 								</ul>
 							</section>
 					</section>
+					<!-- Main -->
+						<div id="main" class="loading">
 
-				<!-- Main -->
-					<div id="main">
+						</div>
 
-					</div>
+					<!-- Sidebar -->
+						<section id="sidebar" class="loading">
 
-				<!-- Sidebar -->
-					<section id="sidebar">
+							<!-- Intro -->
+								<section id="intro">
+									<header>
+										<img src="bonvoyage.svg"/>
+										<p>The travels &amp; musings of John Gillick</p>
+									</header>
+								</section>
 
-						<!-- Intro -->
-							<section id="intro">
-								<header>
-									<img src="bonvoyage.svg"/>
-									<p>The travels &amp; musings of John Gillick</p>
-								</header>
-							</section>
+							<!-- Mini Posts -->
+								<section>
+									<div class="mini-posts">
+									</div>
+								</section>
 
-						<!-- Mini Posts -->
-							<section>
-								<div class="mini-posts">
+							<!-- About -->
+								<section class="blurb">
+									<h2>About</h2>
+									<p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod amet placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at phasellus sed ultricies.</p>
+									<ul class="actions">
+										<li><a href="#" class="button">Learn More</a></li>
+									</ul>
+								</section>
 
-									<!-- Mini Post -->
-										<article class="mini-post">
-											<header>
-												<h3><a href="#">Vitae sed condimentum</a></h3>
-												<time class="published" datetime="2015-10-20">October 20, 2015</time>
-												<a href="#" class="author"><img src="john_prof.jpg" alt="" /></a>
-											</header>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-										</article>
-								</div>
-							</section>
+							<!-- Footer -->
+								<section id="footer">
+									<ul class="icons">
+										<li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="https://www.facebook.com/JohnGillick" class="fa-facebook"><span class="label">Facebook</span></a></li>
+										<li><a href="https://www.instagram.com/johngillick/" class="fa-instagram"><span class="label">Instagram</span></a></li>
+									</ul>
+								</section>
 
-						<!-- About -->
-							<section class="blurb">
-								<h2>About</h2>
-								<p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod amet placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at phasellus sed ultricies.</p>
-								<ul class="actions">
-									<li><a href="#" class="button">Learn More</a></li>
-								</ul>
-							</section>
-
-						<!-- Footer -->
-							<section id="footer">
-								<ul class="icons">
-									<li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="https://www.facebook.com/JohnGillick" class="fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="https://www.instagram.com/johngillick/" class="fa-instagram"><span class="label">Instagram</span></a></li>
-								</ul>
-							</section>
-
-					</section>
+						</section>
 
 			</div>
 

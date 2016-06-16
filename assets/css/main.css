@@ -3207,6 +3207,20 @@
 
 /* Main */
 
+	.loading {
+		opacity: 0;
+
+	    -webkit-transition: opacity .4s ease-in;
+	    -moz-transition: opacity .4s ease-in;
+	    -ms-transition: opacity .4s ease-in;
+	    -o-transition: opacity .4s ease-in;
+	    transition: opacity .4s ease-in;
+	}
+
+	.loaded {
+		opacity: 1;
+	}
+
 	#main {
 		-moz-flex-grow: 1;
 		-webkit-flex-grow: 1;
